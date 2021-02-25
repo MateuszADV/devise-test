@@ -1,0 +1,6 @@
+<h1>DEVISE TEST</h1>
+<% if  current_user == nil %>
+    <p> POWINNIENEŚ SIĘ zalogować </p>
+<% end %>
+<br/>
+<%= user_signed_in? %>
