@@ -1,2 +1,33 @@
 <h1>Test Nowa klasa</h1>
 
+<div class="container">
+  <div class="row">
+    <div class="col">
+     
+    </div>
+    
+    <div class="col-6">
+    <%= "Tabela - " + @exchange.table.to_s %> <br/> 
+    <%= "Numer - " + @exchange.no.to_s %> <br/>
+    <%= "Data - " + @exchange.effectiveDate %>
+      <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Waluta</th>
+                <th>Kod</th>
+                <th>Sredni</th>
+            </tr>
+        </thead>
+        <% @exchange.rates.each do |rate| %>
+            <tr>
+                <td><%= rate.currency %></td>
+                <td><%= rate.code %></td>
+                <td><%= rate.mid %></td>
+            </tr>
+        <% end %>
+
+      </table>
+    </div>
+    <div class="col">
+  </div>
+</div>

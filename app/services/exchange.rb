@@ -1,13 +1,20 @@
 class Exchange
-    def initialize(table, no, effectiveDate)
-        @table = table
-        @no = no
-        @effectiveDate = effectiveDate
+    String @table
+    String @no
+    String @effectiveDate
+    rates = Array.new
+    def initialize()
     end
-    attr_reader :table, :no, :effectiveDate
-    attr_writer :table, :no, :effectiveDate
+    # def initialize(table, no, effectiveDate, rates)
+    #     @table = table
+    #     @no = no
+    #     @effectiveDate = effectiveDate
+    #     @rates = Array.new
+    # end
+    attr_reader :table, :no, :effectiveDate, :rates
+    attr_writer :table, :no, :effectiveDate, :rates
 
     def to_s
-        "Exchange: #{@table}, #{@no}, #{@effectiveDate}."
+        "Exchange: #{@table}, #{@no}, #{@effectiveDate}}."
     end
 end	

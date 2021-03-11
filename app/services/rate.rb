@@ -2,7 +2,7 @@ class Rate
     String @currency
     String @code
     Float @mid = 0
-    def inotialize()
+    def initialize()
     end
     # def initialize(currency, code, mid)
     #     @currency = currency
@@ -13,6 +13,6 @@ class Rate
     attr_writer :currency, :code, :mid
 
     def to_s
-        "#{@currency} \t #{@code} \t #{@mid}"
+        printf " %-35s %-10s %-10s",@currency, @code, @mid
     end
 end	
