@@ -15,6 +15,35 @@
         </li>
       </ul>
 
+      <nav class="menu" role='navigation'>
+        <ol>
+          <li class="menu-item">
+            <%= link_to "Home", root_path %>
+          </li>
+         
+          <li class="menu-item" aria-haspopup="true">
+            <a href="#0">Widgets</a>
+            <ol class="sub-menu" aria-label="submenu">
+              <li class="menu-item"><a href="#0">Big Widgets</a></li>
+              <li class="menu-item"><a href="#0">Bigger Widgets</a></li>
+              <li class="menu-item"><a href="#0">Huge Widgets</a></li>
+            </ol>
+          </li>
+          <li class="menu-item" aria-haspopup="true">
+            <a href="#0">Kabobs</a>
+            <ol class="sub-menu" aria-label="submenu">
+              <li class="menu-item"><a href="#0">Shishkabobs</a></li>
+              <li class="menu-item"><a href="#0">BBQ kabobs</a></li>
+              <li class="menu-item"><a href="#0">Summer kabobs</a></li>
+            </ol>
+          </li>
+          <li class="menu-item"><a href="#0">Contact</a></li>
+           <li class="menu-item">
+              <%= link_to "Pecunia", pecunia_path %>
+           </li>
+        </ol>
+      </nav>
+
  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
     <% if user_signed_in? %>
         <li class= "navbar-brand">
