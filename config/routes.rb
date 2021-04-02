@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  
+  resources :notes
   get 'pecunia/index'
   devise_for :users
   # get 'home/index'
