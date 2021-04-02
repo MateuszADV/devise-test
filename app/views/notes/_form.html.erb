@@ -13,18 +13,18 @@
 
   <div class="field">
     <%= form.label :status %>
-    <%= form.select :status, options_for_select(@statuses.collect { |s| [s[0], s[0]] }) %>   
+    <%= form.select :status, options_for_select(@statuses.collect { |s| [s[0], s[0]] }),  {:include_blank => "Select"}, class:"form-control custom-select"  %>   
   
   </div>
 
   <div class="field">
     <%= form.label :img_type %>
-    <%= form.text_field :img_type %>
+    <%= form.text_field :img_type, class:"form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :making %>    
-    <%= form.select :making, options_for_select(@makings.collect { |m| [m[0], m[0]]}) %>
+    <%= form.select :making, options_for_select(@makings.collect { |m| [m[0], m[0]]}), class:"form-control" %>
   </div>
 
   <div class="actions">
