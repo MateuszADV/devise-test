@@ -24,6 +24,8 @@ class NotesController < ApplicationController
 
   # GET /notes/1/edit
   def edit
+    @makings = NoteEnum.makings
+    @statuses = NoteEnum.statuses
   end
 
   # POST /notes or /notes.json

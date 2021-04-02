@@ -15,6 +15,18 @@ ActiveRecord::Schema.define(version: 2021_04_02_111652) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "comiks", force: :cascade do |t|
+    t.string "kind"
+    t.string "binding"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "dogs", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "notes", force: :cascade do |t|
     t.string "status"
     t.string "img_type"

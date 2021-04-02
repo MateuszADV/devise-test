@@ -24,7 +24,7 @@
 
   <div class="field">
     <%= form.label :making %>    
-    <%= form.select :making, options_for_select(@makings.collect { |m| [m[0], m[1]]}) %>
+    <%= form.select :making, options_for_select(@makings.collect { |m| [m[0], m[0]]}) %>
   </div>
 
   <div class="actions">
