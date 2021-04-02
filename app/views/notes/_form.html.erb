@@ -13,7 +13,8 @@
 
   <div class="field">
     <%= form.label :status %>
-    <%= form.text_field :status %>
+    <%= form.select :status, options_for_select(@statuses.collect { |s| [s[0], s[0]] }) %>   
+  
   </div>
 
   <div class="field">
@@ -22,8 +23,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :making %>
-    <%= form.text_field :making %>
+    <%= form.label :making %>    
+    <%= form.select :making, options_for_select(@makings.collect { |m| [m[0], m[1]]}) %>
   </div>
 
   <div class="actions">

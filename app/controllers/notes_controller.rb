@@ -1,5 +1,6 @@
 class NotesController < ApplicationController
   before_action :set_note, only: %i[ show edit update destroy ]
+  require 'enums/Note_Enum'
 
   # GET /notes or /notes.json
   def index
@@ -13,6 +14,12 @@ class NotesController < ApplicationController
   # GET /notes/new
   def new
     @note = Note.new
+    @makings = NoteEnum.makings
+    @statuses = NoteEnum.statuses
+    puts "+++++++++++++++++++++++++++++++++++++++++++++++++++"
+    @makings.each do |n|
+      puts n[0]
+    end
   end
 
   # GET /notes/1/edit
