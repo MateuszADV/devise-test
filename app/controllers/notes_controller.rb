@@ -14,18 +14,12 @@ class NotesController < ApplicationController
   # GET /notes/new
   def new
     @note = Note.new
-    @makings = NoteEnum.makings
-    @statuses = NoteEnum.statuses
-    puts "+++++++++++++++++++++++++++++++++++++++++++++++++++"
-    @makings.each do |n|
-      puts n[0]
-    end
+   
   end
 
   # GET /notes/1/edit
   def edit
-    @makings = NoteEnum.makings
-    @statuses = NoteEnum.statuses
+ 
   end
 
   # POST /notes or /notes.json
