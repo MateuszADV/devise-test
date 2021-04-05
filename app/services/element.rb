@@ -1,4 +1,4 @@
-class NoteEnum
+class Element
     # Enumerator
     enum status: ["KOLEKCJA", "FOR SELL", "SOLD", "RESERVATION"]
 
