@@ -4,7 +4,7 @@ class ElementSelect < ActiveRecord::Base
 
     enum making: ["PAPIER", "POLIMER", "HYBRYDA"]
 
-    enum img: ["SKAN", "FOTO", "LOC", "WWW" ]
+    enum img_type: ["SKAN", "FOTO", "LOC", "WWW" ]
 
 end
   

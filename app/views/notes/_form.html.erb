@@ -21,17 +21,15 @@
 
   <div class="field">
     <%= form.label :img_type %>
-    <%= form.text_field :img_type, class:"form-control" %>
+    <% form.text_field :img_type, class:"form-control" %>
+    <%= form.select :img_type, options_for_select(@img_types.collect { |m| [m[0], m[0]]}),  {:include_blank => "Select"}, class:"form-control" %> 
   </div>
 
   <div class="field">
     <%= form.label :making %>    
-    <%= form.text_field :making, class:"form-control" %>
-    <%
-=begin%>
- <%= form.select :making, options_for_select(@makings.collect { |m| [m[0], m[0]]}), class:"form-control" %> 
-<%
-=end%>
+    <% form.text_field :making, class:"form-control" %>
+  <%= form.select :making, options_for_select(@makings.collect { |m| [m[0], m[0]]}),  {:include_blank => "Select"}, class:"form-control" %> 
+
   </div>
 
   <div class="actions">

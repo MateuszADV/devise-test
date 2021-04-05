@@ -16,6 +16,8 @@ class NotesController < ApplicationController
   def new
     @note = Note.new
     @statuses = ElementSelect.statuses
+    @makings = ElementSelect.makings
+    @img_types = ElementSelect.img_types
   end
 
   # GET /notes/1/edit
