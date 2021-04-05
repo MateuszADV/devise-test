@@ -1,8 +1,4 @@
 class TestController < ApplicationController
-  require 'Book'
-  require 'Book_with_cd'
-  # require 'Exchange'
-  # require 'Rate'
   require 'json'
 
   require 'Exchange_Rate'
@@ -62,9 +58,9 @@ class TestController < ApplicationController
     #   puts r
     # end
 
-    @exchange_rate = ExchangeRate.new
-    @exchange = @exchange_rate.rate
-    puts @exchange
+    # @exchange_rate = ExchangeRate.new
+    # @exchange = @exchange_rate.rate
+    # puts @exchange
   end
 
 end
