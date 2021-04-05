@@ -1,7 +1,5 @@
 class TestController < ApplicationController
-  require 'json'
 
-  require 'Exchange_Rate'
   def index
     # puts "&&&&&&&&&&&&&&&&&&&&&&&&&&& TEST &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
     # book_1 = Book.new("Pan Tadeusz", "Adam Mickiewicz", 200, 1834)
