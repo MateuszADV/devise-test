@@ -1,7 +1,6 @@
 class NotesController < ApplicationController
   before_action :set_note, only: %i[ show edit update destroy ]
- 
-  require "enums/Element_Select"
+
 
   # GET /notes or /notes.json
   def index
