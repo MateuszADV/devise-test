@@ -1,6 +1,6 @@
-class Element
+class Element < ActiveRecord::Base
     # Enumerator
-    # enum status: ["KOLEKCJA", "FOR SELL", "SOLD", "RESERVATION"]
+    enum status: ["KOLEKCJA", "FOR SELL", "SOLD", "RESERVATION"]
 
     # enum making: {PAPIER: 0, POLIMER: 1, HYBRYDA: 2}
 
