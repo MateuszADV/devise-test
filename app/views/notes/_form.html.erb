@@ -13,12 +13,9 @@
 
   <div class="field">
     <%= form.label :status %>
-    <%= form.text_field :status, class:"form-control" %>
-    <%
-=begin%>
- <%= form.select :status, options_for_select(@statuses.collect { |s| [s[0], s[0]] }),  {:include_blank => "Select"}, class:"form-control custom-select"  %>    
-<%
-=end%>
+    <% form.text_field :status, class:"form-control" %>
+    <%= form.select :status, options_for_select(@statuses.collect { |s| [s[0], s[0]] }),  {:include_blank => "Select"}, class:"form-control custom-select"  %>    
+
   
   </div>
 
