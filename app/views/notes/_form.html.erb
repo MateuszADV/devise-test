@@ -13,7 +13,12 @@
 
   <div class="field">
     <%= form.label :status %>
-    <%= form.select :status, options_for_select(@statuses.collect { |s| [s[0], s[0]] }),  {:include_blank => "Select"}, class:"form-control custom-select"  %>   
+    <%= form.text_field :status, class:"form-control" %>
+    <%
+=begin%>
+ <%= form.select :status, options_for_select(@statuses.collect { |s| [s[0], s[0]] }),  {:include_blank => "Select"}, class:"form-control custom-select"  %>    
+<%
+=end%>
   
   </div>
 
@@ -24,7 +29,12 @@
 
   <div class="field">
     <%= form.label :making %>    
-    <%= form.select :making, options_for_select(@makings.collect { |m| [m[0], m[0]]}), class:"form-control" %>
+    <%= form.text_field :making, class:"form-control" %>
+    <%
+=begin%>
+ <%= form.select :making, options_for_select(@makings.collect { |m| [m[0], m[0]]}), class:"form-control" %> 
+<%
+=end%>
   </div>
 
   <div class="actions">
