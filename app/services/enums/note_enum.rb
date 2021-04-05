@@ -9,5 +9,5 @@ class NoteEnum < ApplicationRecord
     enum 
       img: {SKAN: 0 , FOTO: 1 , LOC: 2 , WWW: 3 }
     end
-  end
+end
   
