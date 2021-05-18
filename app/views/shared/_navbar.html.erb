@@ -17,6 +17,10 @@
 
       <nav class="menu" role='navigation'>
         <ol>
+        <ul >
+            <li ><%= link_to 'English', url_for(locale: :en) %></li>
+            <li><%= link_to 'Polish', url_for(locale: :pl) %></li>
+        </ul>
           <li class="menu-item">
             <%= link_to "Home", root_path %>
           </li>
