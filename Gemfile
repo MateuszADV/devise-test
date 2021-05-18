@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'json', '~> 2.5', '>= 2.5.1'
-
+gem 'i18n', '~> 1.8', '>= 1.8.10'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
