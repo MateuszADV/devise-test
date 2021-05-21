@@ -10,21 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_02_111652) do
+ActiveRecord::Schema.define(version: 2021_05_21_144156) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "comiks", force: :cascade do |t|
-    t.string "kind"
-    t.string "binding"
+  create_table "countries", force: :cascade do |t|
+    t.string "continent"
+    t.string "country_en"
+    t.string "country_pl"
+    t.string "capital_city"
+    t.string "alfa_2"
+    t.string "alfa_3"
+    t.string "numeric_code"
+    t.string "iso_code"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "dogs", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.boolean "exists"
   end
 
   create_table "notes", force: :cascade do |t|

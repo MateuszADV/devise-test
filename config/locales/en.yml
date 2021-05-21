@@ -30,5 +30,31 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  welcome: "Welcome!"
-  services_html: "Welcome to my webpage, TEST TEST"
+  global:
+    country:
+      countries_list: " Countries List"
+    menu:
+      home: "Home"
+      notes: "Notes"
+      countries: "Countries"
+  home:
+    index:
+      welcome: "Welcome!"
+      services_html: "Welcome to my webpage, TEST TEST"
+  helpers:
+    submit:
+      country:
+        create: "Add Country"
+        update: "Update Country"
+  activerecord:
+    attributes:
+      country:
+        continent: "Continent"
+        country_en: "Country (en)"
+        country_pl: "Country (pl)"
+        capital_city: "Capital City"
+        alfa_2: "Alfa 2"
+        alfa_3: "Alfa 3"
+        numeric_code: "Numeric code"
+        iso_code: "Iso code"
+

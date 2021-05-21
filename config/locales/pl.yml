@@ -1,3 +1,28 @@
 pl:
-  welcome: "WITAM SERDECZNIE!"
-  services_html: "Witam na mojej stronie, TEST TEST"
+  global:
+    country:
+      countries_list: "Lista Państw"
+    menu:
+      home: "Strona domowa"
+      notes: "Banknoty"
+      countries: "Państwa"
+  home:
+    index:
+      welcome: "WITAM SERDECZNIE!"
+      services_html: "Witam na mojej stronie, TEST TEST"
+  helpers:
+    submit:
+      country:
+        create: "Dodaj Państwo"
+        update: "Zapisz Zmiany"
+  activerecord:
+      attributes:
+        country:
+          continent: "Komtynent"
+          country_en: "Państwo (en)"
+          country_pl: "Państwo (pl)"
+          capital_city: "Stolica"
+          alfa_2: "Alfa 2"
+          alfa_3: "Alfa 3"
+          numeric_code: "Kod numeryczny"
+          iso_code: "Kod Iso"
