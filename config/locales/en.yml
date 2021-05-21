@@ -30,17 +30,19 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  global:
-    country:
-      countries_list: " Countries List"
-    menu:
-      home: "Home"
-      notes: "Notes"
-      countries: "Countries"
   home:
     index:
       welcome: "Welcome!"
       services_html: "Welcome to my webpage, TEST TEST"
+  global:
+    text:
+      welcome: "Welcome! TEXT GLOBAL"
+    menu:
+      home: "Home"
+      notes: "Notes"
+      countries: "Countries"
+    country:
+      countries_list: "Countries List"  
   helpers:
     submit:
       country:

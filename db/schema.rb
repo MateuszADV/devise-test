@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_21_144156) do
+ActiveRecord::Schema.define(version: 2021_05_21_163543) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,23 @@ ActiveRecord::Schema.define(version: 2021_05_21_144156) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "exists"
+  end
+
+  create_table "currencies", force: :cascade do |t|
+    t.bigint "country_id", null: false
+    t.string "cod"
+    t.string "currency"
+    t.string "change"
+    t.integer "active"
+    t.string "data_exchange"
+    t.string "currency_from"
+    t.string "converter"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "pattern"
+    t.string "currency_series"
+    t.index ["country_id"], name: "index_currencies_on_country_id"
   end
 
   create_table "notes", force: :cascade do |t|
@@ -52,4 +69,5 @@ ActiveRecord::Schema.define(version: 2021_05_21_144156) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "currencies", "countries"
 end
