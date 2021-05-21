@@ -1,6 +1,5 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do  
   
-  resources :currencies
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
     resources :notes
     get 'pecunia/index'
@@ -10,7 +9,10 @@ Rails.application.routes.draw do
 
     get 'pecunia/index', to: 'pecunia#index', as: 'pecunia'
 
-    resources :countries
+    resources :countries do
+      resources :currencies
+    end 
+    resources :currencies
 
     # TESTY
     get 'test/index'
