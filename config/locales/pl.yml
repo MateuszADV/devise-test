@@ -17,6 +17,9 @@ pl:
       country:
         create: "Dodaj Państwo"
         update: "Zapisz Zmiany"
+      currency:
+        create: "Dodaj  Walutę"
+        update: "Zapisz Zmiany"
   activerecord:
     attributes:
       country:
