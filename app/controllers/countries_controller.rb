@@ -6,20 +6,20 @@ class CountriesController < ApplicationController
     # @countries = Country.all
     @countries = Country.page(params[:page]).per(10)
     puts "############### KAMINARI #####################"
-    Country.count                     #=> 1000
-    Country.page(1).limit_value       #=> 20
-    Country.page(1).total_pages       #=> 50
-    Country.page(1).current_page      #=> 1
-    Country.page(1).next_page         #=> 2
-    Country.page(2).prev_page         #=> 1
-    Country.page(1).first_page?       #=> true
-    Country.page(50).last_page?       #=> true
-    Country.page(100).out_of_range?   #=> true
+    puts Country.count                     #=> 1000
+    puts Country.page(1).limit_value       #=> 20
+    puts Country.page(1).total_pages       #=> 50
+    puts Country.page(1).current_page      #=> 1
+    puts Country.page(1).next_page         #=> 2
+    puts Country.page(2).prev_page         #=> 1
+    puts Country.page(1).first_page?       #=> true
+    puts Country.page(50).last_page?       #=> true
+    puts Country.page(100).out_of_range?   #=> true
     puts "############### END #########################"
   end
 
   def pagin
-    # @countries = Country.all
+    @countriest = Country.all
     @countries = Country.page(params[:page]).per(25)
   end
 
