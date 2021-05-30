@@ -1,0 +1,11 @@
+<H1> TEST PAGINATION </H1>
+<div calss="container">
+    <div class="container row">
+        <% @countries.each_with_index do |country| %>
+            <div class="col-md-3">
+                <%= country.country_en %>
+            </div>
+        <% end %>
+        <%= paginate @countries %>
+    </div>
+</div>

@@ -15,6 +15,13 @@ ActiveRecord::Schema.define(version: 2021_05_21_163543) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "comiks", force: :cascade do |t|
+    t.string "kind"
+    t.string "binding"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "countries", force: :cascade do |t|
     t.string "continent"
     t.string "country_en"
@@ -44,6 +51,11 @@ ActiveRecord::Schema.define(version: 2021_05_21_163543) do
     t.string "pattern"
     t.string "currency_series"
     t.index ["country_id"], name: "index_currencies_on_country_id"
+  end
+
+  create_table "dogs", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "notes", force: :cascade do |t|

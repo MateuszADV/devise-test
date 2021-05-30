@@ -3,7 +3,24 @@ class CountriesController < ApplicationController
 
   # GET /countries or /countries.json
   def index
-    @countries = Country.all
+    # @countries = Country.all
+    @countries = Country.page(params[:page]).per(10)
+    puts "############### KAMINARI #####################"
+    Country.count                     #=> 1000
+    Country.page(1).limit_value       #=> 20
+    Country.page(1).total_pages       #=> 50
+    Country.page(1).current_page      #=> 1
+    Country.page(1).next_page         #=> 2
+    Country.page(2).prev_page         #=> 1
+    Country.page(1).first_page?       #=> true
+    Country.page(50).last_page?       #=> true
+    Country.page(100).out_of_range?   #=> true
+    puts "############### END #########################"
+  end
+
+  def pagin
+    # @countries = Country.all
+    @countries = Country.page(params[:page]).per(25)
   end
 
   # GET /countries/1 or /countries/1.json
