@@ -1,12 +1,15 @@
 <H1> TEST PAGINATION </H1>
 <h4>Ilość Państw: <%= @countriest.size %></h4>
 <div calss="container">
-    <div class="container row">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
         <% @countries.each_with_index do |country| %>
-            <div class="col-md-3">
+            <div class="col">
                 <%= country.country_en %>
             </div>
         <% end %>
-        <%= paginate @countries %>
+       
+    </div>
+    <div class="container" style="text-align:center">
+     <%= paginate @countries %>
     </div>
 </div>
