@@ -8,15 +8,21 @@ class RateMetal
   Float @open_price = 0.0
   Float @low_price = 0.0
   Float @high_price = 0.0
+  String @open_time
+  Float @price = 0.0
+  Float @ch = 0.0
+  Float @ask = 0.0
+  Float @bid = 0.0
 
   def initialize()
   end
 
-  attr_reader :timestamp, :metal, :currency, :exchange, :symbol, :prev_close_price, :open_price, :low_price, :high_price
-  attr_writer :timestamp, :metal, :currency, :exchange, :symbol, :prev_close_price, :open_price, :low_price, :high_price
+  attr_reader :timestamp, :metal, :currency, :exchange, :symbol, :prev_close_price, :open_price, :low_price, :high_price, :open_time, :price, :ch, :ask, :bid
+  attr_writer :timestamp, :metal, :currency, :exchange, :symbol, :prev_close_price, :open_price, :low_price, :high_price, :open_time, :price, :ch, :ask, :bid
 
   def to_s
     puts" ------------------------------------------------------------"
+    printf " | %-20s | %-10s \n" ,"Time:", DateTime.strptime(@timestamp.to_s,'%s').strftime("%Y-%m-%d  %H:%M:%S")
     printf " | %-20s | %-10s \n" ,"metal:", @metal
     printf " | %-20s | %-10s \n" ,"currency:", @currency
     printf " | %-20s | %-10s \n" ,"exchange:", @exchange
@@ -25,6 +31,14 @@ class RateMetal
     printf " | %-20s | %-10s \n" ,"open_price:", @open_price
     printf " | %-20s | %-10s \n" ,"low price:", @low_price
     printf " | %-20s | %-10s \n" ,"high price:", @high_price
+    printf " | %-20s | %-10s \n" ,"Open Time:", DateTime.strptime(@open_time.to_s,'%s').strftime("%Y-%m-%d  %H:%M:%S")
+    printf " | %-20s | %-10s \n" ,"Price:", @price
+    printf " | %-20s | %-10s \n" ,"Ch:", @ch
+    printf " | %-20s | %-10s \n" ,"Ask:", @ask
+    printf " | %-20s | %-10s \n" ,"Bid:", @bid
+
+
+
 
 
 
