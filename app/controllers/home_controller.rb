@@ -7,8 +7,9 @@ class HomeController < ApplicationController
    # response = RestClient.get("https://www.goldapi.io/api/XAG/USD/",
    #                           {'x-access-token' => 'goldapi-kpcmtkw3iluo8-io'}
    # )
-   @response = RestClient.get("https://www.goldapi.io/api/XAU/PLN/",
-                             {'x-access-token' => 'goldapi-kpcmtkw3iluo8-io'}) {|response, request, result| response }
+   @response = RestClient.get("https://www.goldapi.io/api/XAU/USD/",
+                             {'x-access-token' => 'goldapi-kpcmtkw3iluo8-io',
+                              'Content-Type' => 'application/json'}) {|response, request, result| response }
    puts @response.code
    puts @response.class.name
    data = @response.body
