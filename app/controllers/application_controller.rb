@@ -3,7 +3,17 @@ class ApplicationController < ActionController::Base
     protect_from_forgery with: :exception
 
     before_action :update_allowed_parameters, if: :devise_controller?
+    before_action :current_ip
 
+
+    def current_ip
+        # request is the object that carries all the information from the
+        # request to the controller
+        @ip_user = request.remote_ip
+        puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        puts request.remote_ip
+        puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+    end
     def require_user_logged_in!
         redirect_to new_user_session_path, alert: "Musisz być zalogowany" if !user_signed_in?
     end

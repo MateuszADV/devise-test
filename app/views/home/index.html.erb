@@ -17,48 +17,49 @@
 
 
   <div class="col-6" style="text-align: center">
-    <table class="table table-sm table-striped table-bordered table-hover" style="font-size: small; background: darkgray">
-      <thead class="table-dark">
-        <tr>
-          <th>Time</th>
-          <th>Metal</th>
-          <th>Currency</th>
-          <th>Exchange</th>
-          <th>Symbol</th>
-          <th>Prev Close Price</th>
-          <th>Open Price</th>
-          <th>Low Price</th>
-          <th>High Price</th>
-          <th>Open Time</th>
-          <th>Price</th>
-          <th>Change</th>
-          <th>Ask</th>
-          <th>Bid</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><%= DateTime.strptime(@rate_metal.timestamp.to_s,'%s').strftime("%Y-%m-%d \n %H:%M:%S") %></td>
-          <td><%= @rate_metal.metal %></td>
-          <td><%= @rate_metal.currency %></td>
-          <td><%= @rate_metal.exchange %></td>
-          <td><%= @rate_metal.symbol %></td>
-          <td><%= @rate_metal.prev_close_price %></td>
-          <td><%= @rate_metal.open_price %></td>
-          <td><%= @rate_metal.low_price %></td>
-          <td><%= @rate_metal.high_price %></td>
-          <td><%= DateTime.strptime(@rate_metal.open_time.to_s,'%s').strftime("%Y-%m-%d \n %H:%M:%S") %></td>
-          <td><%= @rate_metal.price %></td>
-          <td><%= @rate_metal.ch %></td>
-          <td><%= @rate_metal.ask %></td>
-          <td><%= @rate_metal.bid %></td>
+<!--    <table class="table table-sm table-striped table-bordered table-hover" style="font-size: small; background: darkgray">-->
+<!--      <thead class="table-dark">-->
+<!--        <tr>-->
+<!--          <th>Time</th>-->
+<!--          <th>Metal</th>-->
+<!--          <th>Currency</th>-->
+<!--          <th>Exchange</th>-->
+<!--          <th>Symbol</th>-->
+<!--          <th>Prev Close Price</th>-->
+<!--          <th>Open Price</th>-->
+<!--          <th>Low Price</th>-->
+<!--          <th>High Price</th>-->
+<!--          <th>Open Time</th>-->
+<!--          <th>Price</th>-->
+<!--          <th>Change</th>-->
+<!--          <th>Ask</th>-->
+<!--          <th>Bid</th>-->
+<!--        </tr>-->
+<!--      </thead>-->
+<!--      <tbody>-->
+<!--        <tr>-->
+<!--          <td><%#= DateTime.strptime(@rate_metal.timestamp.to_s,'%s').strftime("%Y-%m-%d \n %H:%M:%S") %></td>-->
+<!--          <td><%#= @rate_metal.metal %></td>-->
+<!--          <td><%#= @rate_metal.currency %></td>-->
+<!--          <td><%#= @rate_metal.exchange %></td>-->
+<!--          <td><%#= @rate_metal.symbol %></td>-->
+<!--          <td><%#= @rate_metal.prev_close_price %></td>-->
+<!--          <td><%#= @rate_metal.open_price %></td>-->
+<!--          <td><%#= @rate_metal.low_price %></td>-->
+<!--          <td><%#= @rate_metal.high_price %></td>-->
+<!--          <td><%#= DateTime.strptime(@rate_metal.open_time.to_s,'%s').strftime("%Y-%m-%d \n %H:%M:%S") %></td>-->
+<!--          <td><%#= @rate_metal.price %></td>-->
+<!--          <td><%#= @rate_metal.ch %></td>-->
+<!--          <td><%#= @rate_metal.ask %></td>-->
+<!--          <td><%#= @rate_metal.bid %></td>-->
 
-        </tr>
-      </tbody>
-    </table>
+<!--        </tr>-->
+<!--      </tbody>-->
+<!--    </table>-->
   </div>
 
   <div class="col">
+    IP USER <%= @ip_user %>
   </div>
 </div>
 
